@@ -177,3 +177,77 @@ for i in outer_list:
             
 import stellar_classes
 
+#generowanie asteroid
+
+def roll (a,b):
+    res = random.randrange(a, b)
+    return res
+
+asteroid_body = ['Large asteroid', 'Asteroid Cluster', 'Asteroid belt']
+asteroid_composition = ['ice', 'rock', 'crystal', 'metal']
+
+asteroid_count = 0
+
+asteroid_list = []
+
+for i in inner_list:
+    if i == 'Asteroid':
+        asteroid_count +=1
+        
+for i in biosphere_list:
+    if i == 'Asteroid':
+        asteroid_count +=1 
+        
+for i in outer_list:
+    if i == 'Asteroid':
+        asteroid_count +=1
+
+ast_num = 0
+
+for i in range(0, asteroid_count):
+    asteroid_list.append('Asteroid no. ' + str(ast_num))
+    ast_num += 1
+    
+asteroid_obj_list = []
+    
+for i in asteroid_list:
+    asteroid_obj_list.append(stellar_classes.asteroid(i, 
+                                                      random.choice(asteroid_body), 
+                                                      random.choice(asteroid_composition), 
+                                                      'water', 'noble gas', 
+                                                      roll(1,500), roll(1,500), 
+                                                      False))
+
+    
+for i in asteroid_obj_list:
+    print ('\n', i.name,':', i.bodytype, 'mainly composed of ', i.composition)
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

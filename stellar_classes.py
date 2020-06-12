@@ -8,66 +8,84 @@ Created on Tue Jun  9 08:30:47 2020
 #proponowane klasy obiektów
 
 class phenomena:
-    kind = ''               #what kind of phenomena (solar flares, radiation burst etc)
-    description = ''
+    def __init__(self, kind):
+        self.kind = kind                          #what kind of phenomena (solar flares, radiation burst etc)
 
 class gas_giant:
-    size = ''               #captain obvious
-    moons = 0               #satellites - natural and artificial
-    anomaly = False         #stellaris anomaly
+    def __init__(self, size, moons, anomaly):
+        self.size = size                        #captain obvious
+        self.moons = moons                      #satellites - natural and artificial
+        self.anomaly = anomaly                  #stellaris anomaly
     
 class cloud:
-    composition = ''
-    resource = ''
-    ammount = 0
+    def __init__(self, composition, resource, ammount):
+        self.composition = composition
+        self.resource = resource
+        self.ammount = ammount
     
-class lesser_body:          #asteroidy,pola asteroid, mniejsze księżyce etc
-    bodytype = ''           #asteroida / pas /etc
-    composition = ''        #ice / carbon / rocky / crystalline
-    resource1 = ''           #resource - RT book
-    resource2 = ''
-    ammount1 = 0             #ammount
-    ammount2 = 0
-    anomaly = False         #stellaris anomaly
+class asteroid:
+    def __init__(self, name, bodytype, composition, 
+             resource1, resource2, ammount1, ammount2,
+             anomaly):                          #asteroidy,pola asteroid
+        self.name = name
+        self.bodytype = bodytype                #asteroida / pas /etc
+        self.composition = composition          #ice / carbon / rocky / crystalline
+        self.resource1 = resource1              #resource - RT book
+        self.resource2 = resource2
+        self.ammount1 = ammount1                #ammount of resource
+        self.ammount2 = ammount2
+        self.anomaly = anomaly                  #stellaris anomaly
         
 class barren:               #lifeless planet
-    bodytype = ''           #body type from RT (small & dense, etc)               
-    gravity = ''            #gravity - warhammer standards (lower/ normal / higher)
-    gs = 1                  #number of Gs 
-    resource1 = ''
-    resource2 = ''
-    ammount1 = 0
-    ammount2 = 0
-    anomaly = False
+    def __init__(self, bodytype, gravity, gs, 
+                 resource1, resource2, ammount1, ammount2,
+                 anomaly):
+        self.bodytype = bodytype                 #body type from RT (small & dense, etc)
+        self.gravity = gravity                   #gravity - warhammer standards (lower/ normal / higher)
+        self.gs = gs                             #number of Gs 
+        self.resource1 = resource1
+        self.resource2 = resource2
+        self.ammount1 = ammount1
+        self.ammount2 = ammount2
+        self.anomaly = anomaly
     
 class livingplanet:
-    bodytype = ''
-    gravity =''
-    gs = 1
-    resource1 = ''
-    resource2 = ''
-    resource3 = ''
-    ammount1 = 0
-    amomunt2 = 0
-    ammount3 = 0
-    anomaly = False
+    def __init__(self, bodytype, gravity, gs,
+                 resource1, resource2, resource3,
+                 ammount1, ammount2, ammount3, anomaly):
+        self.bodytype = bodytype
+        self.gravity = gravity
+        self.gs = gs  
+        self.resource1 = resource1
+        self.resource2 = resource2
+        self.resource3 = resource3
+        self.ammount1 = ammount1
+        self.amomunt2 = ammount2
+        self.ammount3 = ammount3
+        self.anomaly = anomaly
     
-class strashipgraveyard:
-    origin = ''
-    ships = 0
-    xenotech = 0            #ammount of xeno resources
-    archeotech = 0          #archeo reseources
+class graveyard:
+    def __init__(self, origin, ships, xenotech, archeotech):
+        self.origin = origin
+        self.ships = ships
+        self.xenotech = xenotech                #ammount of xeno resources
+        self.archeotech = archeotech             #archeo reseources
 
-class hull:                 #hulls for graveyard
-    faction = ''
-    hullclass = ''
-    condition = ''
+class hull:
+    def __init__(self, faction, hullclass,
+                 condition, xenotech, archeotech):                 #hulls for graveyard
+        self.faction = faction
+        self.hullclass = hullclass
+        self.condition = condition
+        self.xenotech = xenotech
+        self.archeotech = archeotech
     
 class station:
-    faction = ''
-    role = ''               #observation, reaserch, military,fortress
-    condition = ''
-    xenotech = ''
-    archeotech = ''
+    def __init__(self, faction, role, condition, xenotech, archeotech):
+        self.faction = faction
+        self.role = role                            #observation, reaserch, military,fortress
+        self.condition = condition
+        self.xenotech = xenotech
+        self.archeotech = archeotech
 
     

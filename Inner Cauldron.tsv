@@ -1,9 +1,7 @@
 Range1	Range2	Element
 1	21	Nothing
-21	30	Asteroid cluster
+21	30	Asteroid
 30	42	Dust cloud
 42	46	Gas Giant
-46	57	Gravity Riptide
-57	77	Planet
-77	89	Radiation burst
-89	101	Solar flares
+47	80	Planet
+80	101	Stellar phenomena

@@ -1,0 +1,6 @@
+inner1	inner2	bio1	bio2	out1	out2	Type
+1	61	1	11	0	0	Molten World
+61	81	11	51	1	31	Barren World
+81	84	51	55	31	34	Broken World
+84	101	55	76	34	54	Toxic World
+999	999	76	101	54	101	Frozen World
